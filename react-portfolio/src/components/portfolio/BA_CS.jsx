@@ -5,7 +5,6 @@ import Thesis_CS from "../../assets/BA_Daniel_Schroter_final.pdf";
 
 function BaCS(props) {
 
-    const words = ["Reinforcement Learning", "DDPG", "policy-gradient", "supply chain", "multi-agent", "cost optimization", "open ai", "gym"]
     return (
         <div>
 
@@ -15,8 +14,7 @@ function BaCS(props) {
             </div>
 
             <div className="portfolio__modal-para">
-                {/*<h4 className="portfolio__modal-heading">Keywords:</h4>*/}
-                <Keywords words={words}/>
+                <Keywords words={props.words}/>
 
             </div>
 

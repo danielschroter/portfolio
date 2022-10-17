@@ -12,6 +12,8 @@ import {AiOutlineClose} from "react-icons/ai";
 
 import BaBwl from "./BA_BWL";
 import BaCS from "./BA_CS";
+import Rasa from "./RASA";
+import SoNLP from "./SO_NLP";
 
 const data = [
     {
@@ -34,15 +36,19 @@ const data = [
         id: 3,
         image: IMG3,
         title: 'Builduing a chatbot with RASA',
-        github: 'https://github.com',
+        github: '#',
         more: '#',
+        keywords: ["RASA", "Question-Answering-Systems", "AI-based Chatbot", "FastAPI", "Python", "Elasticsearch", "Haystack"],
+
     },
     {
         id: 4,
         image: IMG4,
-        title: 'Builduing an autonomous Crane',
-        github: 'https://github.com',
-        more: '#',
+        title: 'NLP: Automatic Tagging of StackOverflow questions',
+        subheading: "Applying Deep Learning to automatically tag StackOverflow questions based on Title & Body text",
+        keywords: ["Natural Language Processing", "Deep Learning", "Python", "Neural Networks", "Bag of Words", "LSTM", "Word Embeddings", "Grid Search"],
+        github: 'https://github.com/danielschroter/so_nlp',
+
     },
     {
         id: 5,
@@ -82,7 +88,8 @@ const Portfolio = () => {
                             </div>
                             <h3>{title}</h3>
                             <div className="portfolio__item-cta">
-                                <a href={github} className="btn" target='_blank'>Github</a>
+                                {id === 3 ? null : <a href={github} className="btn" target='_blank'>Github</a>}
+
                                 <a className="btn btn-primary" onClick={() => toggleTab(id)}>Read More</a>
                             </div>
                         </div>
@@ -96,7 +103,9 @@ const Portfolio = () => {
                                     </h3>
                                 </div>
                                 {id === 1 ? <BaBwl git={github} words={keywords}/> :
-                                    (id === 2 ? <BaCS git={github} words={keywords}/> : null)}
+                                    (id === 2 ? <BaCS git={github} words={keywords}/> :
+                                        (id === 3 ? <Rasa words={keywords} /> :
+                                            (id === 4 ? <SoNLP words={keywords} git={github}/> : null)))}
                             </div>
                         </div>
 

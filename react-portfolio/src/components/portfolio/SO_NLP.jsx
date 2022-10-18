@@ -1,6 +1,6 @@
 import React from 'react';
 import Keywords from "./Keywords";
-import Model_img from "../../assets/title_body_model.svg";
+import Model_img from "../../assets/architecture_so-nlp.png";
 
 
 function SoNLP(props) {

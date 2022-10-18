@@ -1,8 +1,8 @@
 import React from 'react'
 import './contact.css'
 import {MdOutlineMail} from "react-icons/md";
-import {RiMessengerLine} from "react-icons/ri";
 import {BsWhatsapp} from "react-icons/bs";
+import {BsLinkedin} from "react-icons/bs";
 
 const Contact = () => {
     return (
@@ -14,33 +14,33 @@ const Contact = () => {
                     <article className="contact__option">
                         <MdOutlineMail className="contact__option-icon"/>
                         <h4>Email</h4>
-                        <h5>daniel.schroter@tum.de</h5>
-                        <a href="mailto:daniel.schroter@tum.de" target="_blank">Send a message</a>
-                    </article>
-                    <article className="contact__option">
-                        <RiMessengerLine className="contact__option-icon"/>
-                        <h4>Messenger</h4>
-                        <h5>daniel.schroter@tum.de</h5>
-                        <a href="https://m.me/daniel.schroter.9" target="_blank">Send a message</a>
+                        <h5>daniel@schroter.biz</h5>
+                        <a href="mailto:daniel@schroter.biz" target="_blank">Send a message</a>
                     </article>
                     <article className="contact__option">
                         <BsWhatsapp className="contact__option-icon"/>
-                        <h4>Email</h4>
+                        <h4>Whatsapp</h4>
                         <h5>+4915225291155</h5>
                         <a href="https://api.whatsapp.com/send?phone=4915225291155" target="_blank">Send a message</a>
+                    </article>
+                    <article className="contact__option">
+                        <BsLinkedin className="contact__option-icon"/>
+                        <h4>LinkedIn</h4>
+                        <h5>Daniel Schroter</h5>
+                        <a href="https://www.linkedin.com/in/daniel-schroter/" target="_blank">Send a message</a>
                     </article>
                 </div>
 
 
-                <form action="">
-                    <input type="text" name="name" placeholder="Your Full Name" required />
-                    <input type="email" name="email" placeholder="Your Email" required/>
-                    <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
-                    <button type="submit" className="btn btn-primary">Send Message</button>
-                </form>
-
-
+                {/*<form action="">*/}
+                {/*    <input type="text" name="name" placeholder="Your Full Name" required />*/}
+                {/*    <input type="email" name="email" placeholder="Your Email" required/>*/}
+                {/*    <textarea name="message" rows="7" placeholder="Your Message" required></textarea>*/}
+                {/*    <button type="submit" className="btn btn-primary">Send Message</button>*/}
+                {/*</form>*/}
             </div>
+
+
         </section>
     )
 }

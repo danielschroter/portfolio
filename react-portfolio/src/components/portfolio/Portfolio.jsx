@@ -19,13 +19,24 @@ import Projecthr21 from "./ProjectHr21";
 
 const data = [
     {
-        id: 1,
-        image: IMG1,
-        title: 'Predictive Maintenance within a production line',
-        github: 'https://github.com/danielschroter/predictive_main_bosch',
-        subheading: "Bachelor Thesis: Applying machine learning algorithms for predictive maintenance in a production line.",
-        keywords: ["R", "Machine Learning", "CRISP-DM", "Business Process", "t-sne", "random forest", "xgBoost", "cost sensitive learning"]
+        id: 6,
+        image: IMG6,
+        title: 'ProjectHR21 - NLP-Web-Application to transform the way we work together',
+        github: 'https://github.com',
+        subheading: 'Overcoming the boundaries of personal networks and creating new ways of collaboration',
+        keywords: ["Natural Language Processing", "Web-Application", "MERN-Stack", "Python", "HR-TECH", "Competence Extraction", "Skills Monitoring", "New Work"],
+        more: '#',
     },
+    {
+        id: 5,
+        image: IMG5,
+        title: 'ExplainableAI - Making Neural Networks explainable for NLP',
+        github: 'https://github.com/danielschroter/explainableAI',
+        subheading: 'Applying explainability techniques to understand the motives and decision of neural networks.',
+        keywords: ["Natural Language Processing", "Deep Learning", "Explainability", "Neural Networks", "Interpretability", "Siamese Neural Networks", "Python", "LIME", "SHAP", "Key-Point Extraction"],
+        more: '#',
+    },
+
     {
         id: 2,
         image: IMG2,
@@ -53,23 +64,15 @@ const data = [
 
     },
     {
-        id: 5,
-        image: IMG5,
-        title: 'ExplainableAI - Making Neural Networks explainable for NLP',
-        github: 'https://github.com/danielschroter/explainableAI',
-        subheading: 'Applying explainability techniques to understand the motives and decision of neural networks.',
-        keywords: ["Natural Language Processing", "Deep Learning", "Explainability", "Neural Networks", "Interpretability", "Siamese Neural Networks", "Python", "LIME", "SHAP", "Key-Point Extraction"],
-        more: '#',
+        id: 1,
+        image: IMG1,
+        title: 'Predictive Maintenance within a production line',
+        github: 'https://github.com/danielschroter/predictive_main_bosch',
+        subheading: "Bachelor Thesis: Applying machine learning algorithms for predictive maintenance in a production line.",
+        keywords: ["R", "Machine Learning", "CRISP-DM", "Business Process", "t-sne", "random forest", "xgBoost", "cost sensitive learning"]
     },
-    {
-        id: 6,
-        image: IMG6,
-        title: 'ProjectHR21 - NLP-Web-Application to transform the way we work together',
-        github: 'https://github.com',
-        subheading: 'Overcoming the boundaries of personal networks and creating new ways of collaboration',
-        keywords: ["Natural Language Processing", "Web-Application", "MERN-Stack", "Python", "HR-TECH", "Competence Extraction", "Skills Monitoring", "New Work"],
-        more: '#',
-    },
+
+
 ]
 
 const Portfolio = () => {
@@ -97,7 +100,7 @@ const Portfolio = () => {
                                 {id === 3 ? null : <a href={github} className="btn" target='_blank'>Github</a>}
 
                                 <a className="btn btn-primary" onClick={() => toggleTab(id)}>Read More</a>
-                                {id === 6 ? <a href="https://projecthr-21.herokuapp.com/" targe="_blank" className='btn btn-primary'>Demo</a> : null}
+                                {id === 6 ? <a href="https://projecthr-21.herokuapp.com/" target="_blank" className='btn btn-primary'>Demo</a> : null}
                             </div>
                         </div>
                         <div className={toggleState === id ? "portfolio__modal active-modal" : "portfolio__modal"}>

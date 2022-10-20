@@ -1,9 +1,9 @@
 import React from 'react';
 import Keywords from "./Keywords";
-import Paper from "../../assets/key-point-analysis-and-explanations-for-quantitative-text-analysis.pdf";
-import Slides from "../../assets/Final_presentation.pptx";
 import {GiGunStock} from "react-icons/gi";
 import P21IMG from "../../assets/ProjectHR21-Skills.jpg";
+import DASHBOARD from "../../assets/ProjectHR21-Dashboard.jpg";
+
 
 
 function Projecthr21(props) {
@@ -12,7 +12,7 @@ function Projecthr21(props) {
         <div>
 
             <div className='porfolio__modal-btn'>
-                <a href="https://projecthr-21.herokuapp.com/" targe="_blank" className='btn btn-tertiary'>Demo</a>
+                <a href="https://projecthr-21.herokuapp.com/" target="_blank" className='btn btn-tertiary'>Demo</a>
                 <a href={props.git} className='btn btn-secondary' target="_blank">Github</a>
             </div>
 
@@ -96,6 +96,10 @@ function Projecthr21(props) {
                         <p>
                             2. Reinforcement Learning in a serial supply chain
                         </p>
+
+                        <div style={{"margin-top":"4rem"}} className="porfolio__modal-image-div">
+                            <img className="portfolio__modal-image" src={DASHBOARD} alt=""/>
+                        </div>
                     </div>
 
 

@@ -146,9 +146,6 @@
     align-items: center;
 }
 
-.portfolio__modal-para-grid-text{
-    justify-content: center;
-}
 
 
 
@@ -220,6 +217,17 @@ margin-right: auto;
     }
     .so_nlp_img{
         width: 90%;
+    }
+
+    .porfolio__modal-para-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.3rem;
+        margin-top: 1.5rem;
+        align-items: center;
+    }
+    .portfolio__modal-para-grid-text{
+        margin-top: 2rem;
     }
 }
 

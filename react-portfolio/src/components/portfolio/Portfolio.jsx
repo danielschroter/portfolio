@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/portfolio1.jpg'
-import IMG2 from '../../assets/portfolio2.jpg'
-import IMG3 from '../../assets/portfolio3.jpg'
-import IMG4 from '../../assets/portfolio4.jpg'
-import IMG5 from '../../assets/portfolio5.png'
-import IMG6 from '../../assets/portfolio6.jpg'
+import IMG1 from '../../assets/production.jpg'
+import IMG2 from '../../assets/intelligent agent.jpg'
+import IMG3 from '../../assets/chatbot.jpg'
+import IMG4 from '../../assets/technology.jpg'
+import IMG5 from '../../assets/ai_cropped.jpg'
+import IMG6 from '../../assets/collaboration.jpg'
 
 
 import {AiOutlineClose} from "react-icons/ai";
@@ -14,6 +14,8 @@ import BaBwl from "./BA_BWL";
 import BaCS from "./BA_CS";
 import Rasa from "./RASA";
 import SoNLP from "./SO_NLP";
+import ExpAI from "./Exp_AI";
+import Projecthr21 from "./ProjectHr21";
 
 const data = [
     {
@@ -53,15 +55,19 @@ const data = [
     {
         id: 5,
         image: IMG5,
-        title: 'Peerroulette - Connecting with like minded people in video chats',
-        github: 'https://github.com',
+        title: 'ExplainableAI - Making Neural Networks explainable for NLP',
+        github: 'https://github.com/danielschroter/explainableAI',
+        subheading: 'Applying explainability techniques to understand the motives and decision of neural networks.',
+        keywords: ["Natural Language Processing", "Deep Learning", "Explainability", "Neural Networks", "Interpretability", "Siamese Neural Networks", "Python", "LIME", "SHAP", "Key-Point Extraction"],
         more: '#',
     },
     {
         id: 6,
         image: IMG6,
-        title: 'ProjectHR21 - Creating an NLP-Web-Application to transform the way we work together',
+        title: 'ProjectHR21 - NLP-Web-Application to transform the way we work together',
         github: 'https://github.com',
+        subheading: 'Overcoming the boundaries of personal networks and creating new ways of collaboration',
+        keywords: ["Natural Language Processing", "Web-Application", "MERN-Stack", "Python", "HR-TECH", "Competence Extraction", "Skills Monitoring", "New Work"],
         more: '#',
     },
 ]
@@ -83,14 +89,15 @@ const Portfolio = () => {
                 {data.map(({id, image, title, github, subheading, keywords}) => {
                     return (< >
                         <div key={id} className="portfolio__item">
-                            <div className="portfolio__item-image">
-                                <img src={image} alt={title}/>
+                            <div className="portfolio__item-image-div">
+                                <img className="portfolio__item-image" src={image} alt={title}/>
                             </div>
                             <h3>{title}</h3>
                             <div className="portfolio__item-cta">
                                 {id === 3 ? null : <a href={github} className="btn" target='_blank'>Github</a>}
 
                                 <a className="btn btn-primary" onClick={() => toggleTab(id)}>Read More</a>
+                                {id === 6 ? <a href="https://projecthr-21.herokuapp.com/" targe="_blank" className='btn btn-primary'>Demo</a> : null}
                             </div>
                         </div>
                         <div className={toggleState === id ? "portfolio__modal active-modal" : "portfolio__modal"}>
@@ -105,7 +112,10 @@ const Portfolio = () => {
                                 {id === 1 ? <BaBwl git={github} words={keywords}/> :
                                     (id === 2 ? <BaCS git={github} words={keywords}/> :
                                         (id === 3 ? <Rasa words={keywords} /> :
-                                            (id === 4 ? <SoNLP words={keywords} git={github}/> : null)))}
+                                            (id === 4 ? <SoNLP words={keywords} git={github}/> :
+                                                (id===5 ? <ExpAI words={keywords} git={github}/> :
+                                                    (id===6 ? <Projecthr21 words={keywords} git={github}/> : null)))))}
+
                             </div>
                         </div>
 

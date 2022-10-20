@@ -19,9 +19,16 @@
     border-color: var(--color-primary-variant);
 }
 
-.portfolio__item-image{
+.portfolio__item-image-div{
     border-radius: 1.5rem;
     overflow:hidden;
+
+}
+
+.portfolio__item-image{
+    height: 360px;
+    /*width: 480px;*/
+    object-fit: cover;
 }
 
 .portfolio__item h3 {
@@ -122,6 +129,27 @@
     color: var(--color-primary)
 }
 
+.porfolio__modal-image-div{
+    border-radius: 1.5rem;
+    overflow:hidden;
+}
+
+.portfolio__modal-image{
+    object-fit: cover;
+}
+
+.porfolio__modal-para-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3rem;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+.portfolio__modal-para-grid-text{
+    justify-content: center;
+}
+
 
 
  /*active modal*/
@@ -155,6 +183,21 @@
     justify-content: center;
     margin-top: 4rem;
 }
+
+
+.portfolio__modal-achievements{
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.portfolio__modal-p21-features{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
 .so_nlp_img {
     width: 50%;
     display: block;

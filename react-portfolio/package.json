@@ -1,5 +1,6 @@
 {
   "name": "react-portfolio",
+  "homepage": "http://daniel.schroter.eu",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

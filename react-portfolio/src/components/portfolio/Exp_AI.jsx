@@ -3,7 +3,6 @@ import Keywords from "./Keywords";
 import Paper from "../../assets/key-point-analysis-and-explanations-for-quantitative-text-analysis.pdf";
 import Slides from "../../assets/Final_presentation.pptx";
 import {GiGunStock} from "react-icons/gi";
-import LIME_EXAMPLE from "../../assets/Example_LIME.jpg";
 
 
 function ExpAI(props) {

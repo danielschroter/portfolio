@@ -1,7 +1,7 @@
 import React from 'react';
 import Keywords from "./Keywords";
 import Paper from "../../assets/key-point-analysis-and-explanations-for-quantitative-text-analysis.pdf";
-import Slides from "../../assets/Final_presentation.pptx";
+import Slides from "../../assets/Final_presentation.pdf";
 import {GiGunStock} from "react-icons/gi";
 
 

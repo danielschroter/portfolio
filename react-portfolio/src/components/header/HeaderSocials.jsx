@@ -11,7 +11,6 @@ const HeaderSocials = () => {
             <a href="https://www.linkedin.com/in/daniel-schroter/" target="_blank"><BsLinkedin/></a>
             <a href="https://github.com/danielschroter" target="_blank"><FaGithub/></a>
             <a href="https://www.instagram.com/daniel.schroter/" target="_blank"><GrInstagram/></a>
-
         </div>
     );
 };

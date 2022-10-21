@@ -76,8 +76,33 @@ header {
     header {
         height: 100vh
     }
-    .header__socials, .scroll__down {
-        /*display: none;*/
+
+    .header__socials{
+        z-index: 1000;
     }
+
+    .scroll__down{
+        z-index: 1000;
+    }
+
+    /*.scroll__down{*/
+    /*    display: none*/
+    /*}*/
+
+
+    /*.header__socials{*/
+    /*    display: flex;*/
+    /*    flex-direction: row;*/
+    /*    align-items:center;*/
+    /*    gap: 0.8rem;*/
+    /*    position: static;*/
+    /*    margin-top: 2rem;*/
+    /*    justify-content: center;*/
+    /*}*/
+
+
+    /*.header__socials::after {*/
+    /*    display: none;*/
+    /*}*/
 }
 

@@ -27,7 +27,7 @@ const About = () => {
                         <article className='about__card'>
                             <FaAward className='about__icon'/>
                             <h5>Education</h5>
-                            <small>University Degrees in Management and Computer Science</small>
+                            <small>Management (B.Sc), Computer Science (B.Sc, soon M.Sc)</small>
                         </article>
 
                         <article className='about__card'>

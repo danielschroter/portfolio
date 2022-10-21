@@ -85,24 +85,38 @@ header {
         z-index: 1000;
     }
 
-    /*.scroll__down{*/
-    /*    display: none*/
-    /*}*/
+    .me{
+        width: 19rem;
+        left: calc(50% - 9.5rem);
+        /*bottom: 4rem;*/
+        /*padding-top: 3rem;*/
+    }
 
 
-    /*.header__socials{*/
-    /*    display: flex;*/
-    /*    flex-direction: row;*/
-    /*    align-items:center;*/
-    /*    gap: 0.8rem;*/
-    /*    position: static;*/
-    /*    margin-top: 2rem;*/
-    /*    justify-content: center;*/
-    /*}*/
+}
+
+/* ========== Media Queries (Small Devices: tablets) ========= */
+
+@media screen and (max-width: 400px) {
+    header {
+        height: 100vh
+    }
+
+    .header__socials{
+        z-index: 1000;
+    }
+
+    .scroll__down{
+        z-index: 1000;
+    }
+
+    .me{
+        width: 16rem;
+        left: calc(50% - 8rem);
+        /*bottom: 4rem;*/
+        /*padding-top: 3rem;*/
+    }
 
 
-    /*.header__socials::after {*/
-    /*    display: none;*/
-    /*}*/
 }
 

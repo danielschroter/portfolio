@@ -1,25 +1,19 @@
 import React from 'react'
-import Header from './components/header/Header';
-import Nav from './components/nav/Nav';
-import About from './components/about/About';
-import Portfolio from './components/portfolio/Portfolio';
-import Experience from './components/experience/Experience';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
+import LandingPageView from "./LandingPageView";
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 
 export const App = () => {
   return (
-    <>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<LandingPageView />} />
+              <Route path=":id" element={<LandingPageView />} />
+          </Routes>
 
-    <Header></Header>
-    <Nav/>
-    <About/>
-    <Experience/>
-    <Portfolio/>
-    <Contact />
-    <Footer/>
-    
-    </>
+      </BrowserRouter>
   )
 }

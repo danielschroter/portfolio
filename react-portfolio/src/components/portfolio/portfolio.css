@@ -244,4 +244,11 @@ margin-right: auto;
     .portfolio__container{
         grid-template-columns: 1fr;
     }
+    .portfolio__modal-p21-features{
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-expai{
+        flex-direction: column;
+    }
 }

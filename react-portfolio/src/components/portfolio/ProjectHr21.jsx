@@ -1,6 +1,6 @@
 import React from 'react';
 import Keywords from "./Keywords";
-import {GiGunStock} from "react-icons/gi";
+import {IoIosRocket} from "react-icons/io";
 import P21IMG from "../../assets/ProjectHR21-Skills.jpg";
 import DASHBOARD from "../../assets/ProjectHR21-Dashboard.jpg";
 
@@ -54,19 +54,19 @@ function Projecthr21(props) {
 
 
                 <article className="portfolio__modal-details">
-                    <GiGunStock className="portfolio__modal-details-icon"/>
+                    <IoIosRocket className="portfolio__modal-details-icon"/>
                     <div>
                         <h4>Secure</h4>
                     </div>
                 </article>
                 <article className="portfolio__modal-details">
-                    <GiGunStock className="portfolio__modal-details-icon"/>
+                    <IoIosRocket className="portfolio__modal-details-icon"/>
                     <div>
                         <h4>Automated</h4>
                     </div>
                 </article>
                 <article className="portfolio__modal-details">
-                    <GiGunStock className="portfolio__modal-details-icon"/>
+                    <IoIosRocket className="portfolio__modal-details-icon"/>
                     <div>
                         <h4>Easy</h4>
                     </div>

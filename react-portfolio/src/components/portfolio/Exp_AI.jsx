@@ -2,7 +2,7 @@ import React from 'react';
 import Keywords from "./Keywords";
 import Paper from "../../assets/key-point-analysis-and-explanations-for-quantitative-text-analysis.pdf";
 import Slides from "../../assets/Final_presentation.pdf";
-import {GiGunStock} from "react-icons/gi";
+import {IoIosRocket} from "react-icons/io";
 
 
 function ExpAI(props) {
@@ -10,7 +10,7 @@ function ExpAI(props) {
     return (
         <div>
 
-            <div className='porfolio__modal-btn'>
+            <div className='porfolio__modal-btn btn-expai'>
                 <a href={Paper} download className='btn btn-tertiary'>Download Paper</a>
                 <a href={Slides} download className='btn btn-tertiary'>Download Presentation</a>
                 <a href={props.git} className='btn btn-secondary' target="_blank">Github</a>
@@ -39,13 +39,13 @@ function ExpAI(props) {
 
 
                 <article className="portfolio__modal-details">
-                    <GiGunStock className="portfolio__modal-details-icon"/>
+                    <IoIosRocket className="portfolio__modal-details-icon"/>
                     <div>
                         <h4>Siamese Neural Network outperforming current solutions by up to 5%</h4>
                     </div>
                 </article>
                 <article className="portfolio__modal-details">
-                    <GiGunStock className="portfolio__modal-details-icon"/>
+                    <IoIosRocket className="portfolio__modal-details-icon"/>
                     <div>
                         <h4>Novel Approach of Applying LIME to Siamese Neural Networks</h4>
                     </div>

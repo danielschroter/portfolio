@@ -61,6 +61,10 @@ input, textarea {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    .contact__options{
+        gap: 2rem;
+    }
+
 }
 
 
@@ -69,5 +73,10 @@ input, textarea {
 @media screen and (max-width: 600px) {
     .container.contact__container{
         width: var(--container-width-sm);
+    }
+    .contact__options{
+        display:flex;
+        flex-direction: column;
+        gap: 4rem;
     }
 }

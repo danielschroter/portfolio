@@ -9,6 +9,8 @@ import IMG6 from '../../assets/collaboration.jpg'
 
 
 import {AiOutlineClose} from "react-icons/ai";
+import {useParams} from "react-router-dom";
+import {useEffect} from "react";
 
 import BaBwl from "./BA_BWL";
 import BaCS from "./BA_CS";
@@ -40,7 +42,7 @@ const data = [
     {
         id: 2,
         image: IMG2,
-        title: 'Reinforcment Learning to optimize cost within a multi-agent supply chain',
+        title: 'Reinforcement Learning to optimize cost within a multi-agent supply chain',
         github: 'https://github.com/danielschroter/thesis_cs_rl',
         subheading: "Bachelor Thesis: Training an agent with Reinforcement Learning Algorithms to optimize cost in a serial multi-agent supply chain.",
         keywords: ["Reinforcement Learning", "DDPG", "Policy Gradient", "Multi Agent Supply Chain", "Cost Optimization", "Open AI Gym"],
@@ -77,11 +79,44 @@ const data = [
 
 const Portfolio = () => {
 
+    const {id} = useParams();
+
+
     const [toggleState, setToggleState] = useState(0);
+    const [initialLoad, setInitialLoad] = useState(false);
 
     const toggleTab = (index) => {
         setToggleState(index);
+        setInitialLoad(true);
     }
+
+    useEffect(() => {
+        if(!initialLoad) {
+            switch (id) {
+                case "expAI":
+                    setToggleState(5);
+                    break;
+                case "predMain":
+                    setToggleState(1);
+                    break;
+                case "projecthr21":
+                    setToggleState(6);
+                    break;
+                case "autoTagging":
+                    setToggleState(4);
+                    break;
+                case "chatbot":
+                    setToggleState(3);
+                    break;
+                case "reinforcement":
+                    setToggleState(2);
+                    break;
+                default:
+                    setToggleState(0);
+            }
+        }
+    })
+
 
     return (
         <section id='portfolio'>
@@ -100,7 +135,8 @@ const Portfolio = () => {
                                 {id === 3 ? null : <a href={github} className="btn" target='_blank'>Github</a>}
 
                                 <a className="btn btn-primary" onClick={() => toggleTab(id)}>Read More</a>
-                                {id === 6 ? <a href="https://projecthr-21.herokuapp.com/" target="_blank" className='btn btn-primary'>Demo</a> : null}
+                                {id === 6 ? <a href="https://projecthr-21.herokuapp.com/" target="_blank"
+                                               className='btn btn-primary'>Demo</a> : null}
                             </div>
                         </div>
                         <div className={toggleState === id ? "portfolio__modal active-modal" : "portfolio__modal"}>
@@ -114,10 +150,11 @@ const Portfolio = () => {
                                 </div>
                                 {id === 1 ? <BaBwl git={github} words={keywords}/> :
                                     (id === 2 ? <BaCS git={github} words={keywords}/> :
-                                        (id === 3 ? <Rasa words={keywords} /> :
+                                        (id === 3 ? <Rasa words={keywords}/> :
                                             (id === 4 ? <SoNLP words={keywords} git={github}/> :
-                                                (id===5 ? <ExpAI words={keywords} git={github}/> :
-                                                    (id===6 ? <Projecthr21 words={keywords} git={github}/> : null)))))}
+                                                (id === 5 ? <ExpAI words={keywords} git={github}/> :
+                                                    (id === 6 ?
+                                                        <Projecthr21 words={keywords} git={github}/> : null)))))}
 
                             </div>
                         </div>

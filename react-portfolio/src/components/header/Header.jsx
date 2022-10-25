@@ -12,13 +12,17 @@ const Header = () => {
                 <h1>Daniel Schroter</h1>
                 <h5 className="text-light">Data Scientist & AI Engineer</h5>
                 <CTA></CTA>
-                <HeaderSocials/>
-
-                <div className="me">
-                    <img src={ME} alt="me"/>
-
+                <div className="header__image-row">
+                    <div>
+                        <HeaderSocials/>
+                    </div>
+                    <div className="me">
+                        <img className="me-img" src={ME} alt="me"/>
+                    </div>
+                    <div className="scroll__down-div">
+                        <a href="#contact" className='scroll__down'>Scroll Down</a>
+                    </div>
                 </div>
-                <a href="#contact" className='scroll__down'>Scroll Down</a>
 
             </div>
 

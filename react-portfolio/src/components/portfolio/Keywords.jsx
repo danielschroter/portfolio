@@ -11,7 +11,7 @@ function Keywords(props) {
                         <article className="portfolio__modal-details">
                             <BsPatchCheckFill className="portfolio__modal-details-icon"/>
                             <div>
-                                <h4>{item}</h4>
+                                <h5>{item}</h5>
                             </div>
                         </article>)
                     } )

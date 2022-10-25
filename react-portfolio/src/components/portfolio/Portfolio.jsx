@@ -34,7 +34,7 @@ const data = [
         image: IMG5,
         title: 'ExplainableAI - Making Neural Networks explainable for NLP',
         github: 'https://github.com/danielschroter/explainableAI',
-        subheading: 'Applying explainability techniques to understand the motives and decision of neural networks.',
+        subheading: 'Applying "explainability" techniques to understand the motives and decisions of neural networks.',
         keywords: ["Natural Language Processing", "Deep Learning", "Explainability", "Neural Networks", "Interpretability", "Siamese Neural Networks", "Python", "LIME", "SHAP", "Key-Point Extraction"],
         more: '#',
     },
